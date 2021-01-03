@@ -37,7 +37,7 @@ let currentY = null
 
 // set up images
 let i = 0
-const images = ['images/grimes.png', 'images/elon.png'].map(src => {
+const images = ['/grimes-x-elon-fansite/images/grimes.png', '/grimes-x-elon-fansite/images/elon.png'].map(src => {
     const image = document.createElement('img')
     image.src = src
     return image
