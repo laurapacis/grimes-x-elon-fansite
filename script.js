@@ -53,6 +53,14 @@ document.addEventListener('mousemove', function (event) {
     }
 })
 
+// change image with click
+canvas.addEventListener('click', function () {
+    i = i + 1
+    if (i >= images.length) {
+        i = 0
+    }
+})
+
 // for mobile 
 canvas.addEventListener('touchmove', function (event) {
 //   event.preventDefault();
@@ -64,38 +72,30 @@ canvas.addEventListener('touchmove', function (event) {
   }
 })
 
-// change image with click
-canvas.addEventListener('click', function () {
-    i = i + 1
-    if (i >= images.length) {
-        i = 0
-    }
-})
-
-
-const draw = function () {
-  if (currentX) {
-    if (image.complete) {
-      let x = window.innerWidth > 800 ? 200 : 100;
-      let y = window.innerWidth > 800 ? 200 : 100;
-      context.drawImage(image, currentX - 100, currentY - 100, x, y)
-    }
-    currentX = currentX + (aimX - currentX) * 0.1;
-    currentY = currentY + (aimY - currentY) * 0.1;
-  }
-    
-    
-    
 // start drawing
 const draw = function () {
     if (currentX) {
-        if (images[i].complete) {
-        context.drawImage(images[i], currentX - 50, currentY - 50, 100, 150)
+        if (image.complete) {
+            let x = window.innerWidth > 800 ? 100 : 50;
+            let y = window.innerWidth > 800 ? 150 : 75;
+            context.drawImage(image, currentX - 100, currentY - 100, x, y)
         }
-        currentX = currentX + (aimX - currentX) * 0.10
-        currentY = currentY + (aimY - currentY) * 0.10
+        currentX = currentX + (aimX - currentX) * 0.10;
+        currentY = currentY + (aimY - currentY) * 0.10;
     }
-
     requestAnimationFrame(draw)
 }
+    
+// // start drawing
+// const draw = function () {
+//     if (currentX) {
+//         if (images[i].complete) {
+//         context.drawImage(images[i], currentX - 50, currentY - 50, 100, 150)
+//         }
+//         currentX = currentX + (aimX - currentX) * 0.10
+//         currentY = currentY + (aimY - currentY) * 0.10
+//     }
+
+//     requestAnimationFrame(draw)
+// }
 draw()
