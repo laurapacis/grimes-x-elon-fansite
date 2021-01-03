@@ -55,7 +55,7 @@ document.addEventListener('mousemove', function (event) {
 
 // for mobile 
 canvas.addEventListener('touchmove', function (event) {
-  event.preventDefault();
+//   event.preventDefault();
   aimX = event.pageX
   aimY = event.pageY
   if (currentX === null) {
@@ -72,6 +72,20 @@ canvas.addEventListener('click', function () {
     }
 })
 
+
+const draw = function () {
+  if (currentX) {
+    if (image.complete) {
+      let x = window.innerWidth > 800 ? 200 : 100;
+      let y = window.innerWidth > 800 ? 200 : 100;
+      context.drawImage(image, currentX - 100, currentY - 100, x, y)
+    }
+    currentX = currentX + (aimX - currentX) * 0.1;
+    currentY = currentY + (aimY - currentY) * 0.1;
+  }
+    
+    
+    
 // start drawing
 const draw = function () {
     if (currentX) {
