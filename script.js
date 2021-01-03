@@ -63,7 +63,7 @@ canvas.addEventListener('click', function () {
 
 // for mobile 
 canvas.addEventListener('touchmove', function (event) {
-//   event.preventDefault();
+  event.preventDefault();
   aimX = event.pageX
   aimY = event.pageY
   if (currentX === null) {
