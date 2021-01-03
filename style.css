@@ -1,0 +1,73 @@
+:root {
+  font-size: 62.5%;
+}
+
+* {
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+  cursor: crosshair;
+}
+
+body {
+  background-color: orangered;
+  color: #fbeceb;
+  /* color: crimson; */
+  font-size: 1.6rem;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* header {
+  font-size: 5rem;
+  position: absolute;
+  margin: 2rem auto;
+  top: 45%;
+  padding: 1.3rem 1.3rem 1.3rem 8.1rem;
+  width: 100%;
+  text-align: center;
+  mix-blend-mode: color-dodge;
+}
+
+header p {
+  color: white;
+  mix-blend-mode: color-dodge;
+}
+
+h1 {
+  color: #efefef;
+} */
+
+.sidebar {
+  font-size: 3rem;
+  font-weight: 100;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  padding: 2rem 0 0 5rem;
+  background: white;
+  color: blue;
+  width: 1vw;
+}
+
+a {
+  color: blue;
+  text-decoration: none;
+}
+
+.sidebar a:hover {
+  background: blue;
+  color: #efefef;
+}
+
+.sideText {
+  font-weight: lighter;
+  transform-origin: 50% 0;
+  transform: rotate(90deg) translate(50%, 0);
+  white-space: nowrap;
+  line-height: 1.5;
+}
+
+/* get rid of the tiny little space with scroll bar at the bottom of the page */
+canvas {
+  vertical-align: bottom;
+}
