@@ -53,6 +53,17 @@ document.addEventListener('mousemove', function (event) {
     }
 })
 
+// for mobile 
+canvas.addEventListener('touchmove', function (event) {
+  event.preventDefault();
+  aimX = event.pageX
+  aimY = event.pageY
+  if (currentX === null) {
+    currentX = event.pageX
+    currentY = event.pageY
+  }
+})
+
 // change image with click
 canvas.addEventListener('click', function () {
     i = i + 1
