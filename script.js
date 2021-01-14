@@ -19,8 +19,7 @@ context.scale(2, 2)
 // change color of the background with a click
 canvas.addEventListener("click", function () {
     const curColor = document.body.style.backgroundColor;
-
-    if (curColor === 'orangered') {
+    if (curColor === 'orangered' || curColor === "") {
         document.body.style.backgroundColor = "palegreen";
         }
     else {
@@ -61,16 +60,16 @@ canvas.addEventListener('click', function () {
     }
 })
 
-// for mobile 
-canvas.addEventListener('touchmove', function (event) {
-  event.preventDefault();
-  aimX = event.pageX
-  aimY = event.pageY
-  if (currentX === null) {
-    currentX = event.pageX
-    currentY = event.pageY
-  }
-})
+// // for mobile 
+// canvas.addEventListener('touchmove', function (event) {
+//   event.preventDefault();
+//   aimX = event.pageX
+//   aimY = event.pageY
+//   if (currentX === null) {
+//     currentX = event.pageX
+//     currentY = event.pageY
+//   }
+// })
 
 // // start drawing
 // const draw = function () {
